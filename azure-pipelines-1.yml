@@ -14,8 +14,8 @@ steps:
   inputs:
     azureSubscription: 'AzureRmPipeline-conn'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'AzureRmPipeline-rg'
-    location: 'West Europe'
+    resourceGroupName: $(ResourceGroupName)
+    location: $(Location)
     templateLocation: 'Linked artifact'
     csmFile: 'CreateAzureStorage/azuredeploy.json'
     deploymentMode: 'Incremental'
