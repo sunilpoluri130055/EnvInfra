@@ -21,3 +21,7 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: 'CreateAzureStorage/azuredeploy.json'
     deploymentMode: 'Incremental'
+
+- powershell: |
+    # Using an input-macro:
+    Write-Host "This works: $(ResourceGroupName)"
